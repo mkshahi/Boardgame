@@ -29,6 +29,15 @@ jobs:
     - name: Trivy FS scan 
       run: |
           trivy fs --format table -o trivy-fs-report.html .
+
+    - name: Sonarqube scan
+      uses: SonarSource/sonarqube-scan-action@v4.2.2
+      #env: 
+       # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
+        #SONAR_URL: ${{ secrets.SONAR_URL}}
+        
+      
+     
           
        
 
