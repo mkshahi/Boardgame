@@ -25,6 +25,11 @@ jobs:
       with:
        name: my-artifact
        path: target/*.jar
+
+    - name: Trivy FS scan 
+      run: |
+          trivy fs --format table -o trivy-fs-report.html
+          
        
 
   
