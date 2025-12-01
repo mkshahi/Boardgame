@@ -41,6 +41,10 @@ jobs:
 
     - name: Setup docker buildx
       uses: docker/setup-buildx-action@v3.11.1
+
+    - name: Build docker image
+      run: |
+         docker build -t mkshahi/boardgame:latest .
     
     
       
